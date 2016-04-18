@@ -99,7 +99,16 @@ class Ita_Speed {
 	private function init(){
 		//do stuff on plugins loaded
 
+		$this->load_text_domain();
+
 	}
+
+	private function load_text_domain(){
+
+		load_plugin_textdomain('ita-spid', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+
+}
+
 
 
 }// chiudo la classe
