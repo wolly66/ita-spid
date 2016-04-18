@@ -53,6 +53,7 @@ class Ita_Speed {
 
 		//check for plugin update
 		add_action( 'init', array( $this, 'update_check' ) );
+		add_action( 'plugins_loaded', array( $this, 'init' ) );
 
 	}
 
@@ -83,7 +84,20 @@ class Ita_Speed {
 	 */
 	public function do_update(){
 
-	   update_option( WPIT_CONMAN_PLUGIN_VERSION_NAME , WPIT_CONMAN_PLUGIN_VERSION );
+	   update_option( ITASPID_PLUGIN_VERSION_NAME , ITASPID_PLUGIN_VERSION );
+
+	}
+
+
+	/**
+	 * init function.
+	 *
+	 * Do stuff on plugins loaded
+	 * @access private
+	 * @return void
+	 */
+	private function init(){
+		//do stuff on plugins loaded
 
 	}
 
